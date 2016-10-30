@@ -10,7 +10,7 @@
     <h2>album</h2>
     <div>
       <div class="image-thumbnails" ng-repeat="album in albums | filter:{userId:userIdd}" ng-click="getIdAlbum(album.id)">
-          <a href="#/image/{{album.id}}">{{album.id}}{{album.title}}</a>
+          <a href="#/image/{{album.id}}">{{album.title}}</a>
       </div>
     </div>
     <ng-view></ng-view>
