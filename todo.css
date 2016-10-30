@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+.image-thumbnails{
+    width: 33%;
+    padding:10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.image-thumbnails img{
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+}
+.image-thumbnails p{
+    text-align: center;
+}
+@media screen and (max-width:1023px ){
+    .image-thumbnails{
+        width: 50%;
+    }
+}
+@media screen and (max-width:767px ){
+    .image-thumbnails{
+        width: 100%;
+    }
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="todoApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="todo.js"></script>
+    <link rel="stylesheet" href="todo.css">
+  </head>
+  <body>
+    <h2>Index</h2>
+    <div ng-controller="TodoListController as todoList">
+       <div class="image-thumbnails" ng-repeat="user in users" ng-click="getIdUser(user.id)">
+          <a href="#/album/{{user.id}}">{{user.id}}</a>
+          <span>{{user.name}}</span>
+      </div>
+    </div>
+  </body>
+
+</html>
