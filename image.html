@@ -8,14 +8,15 @@
     <script src="todo.js"></script>
     <link rel="stylesheet" href="todo.css">
   </head>
-  <body>
-    <h2>album</h2>
-    <div ng-controller="TodoListController as todoList">    
+  <body ng-controller="TodoListController as todoList">
+    <h2>Image</h2>
+    <div>    
       <div class="image-thumbnails" ng-repeat="image in images | filter:{albumId:albumIdd}" ng-click="getIdImage(image.id)">
           <p>{{image.id}}</p>
         <a href="{{image.url}}"><img src="{{image.thumbnailUrl}}" /></a> 
           <p>{{image.title}} </p>
       </div>
     </div>
+    <ng-view></ng-view>
   </body>
 </html>

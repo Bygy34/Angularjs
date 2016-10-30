@@ -6,14 +6,15 @@
     <script src="todo.js"></script>
     <link rel="stylesheet" href="todo.css">
   </head>
-  <body>
+  <body ng-controller="TodoListController as todoList">
     <h2>Index</h2>
-    <div ng-controller="TodoListController as todoList">
+    <div>
        <div class="image-thumbnails" ng-repeat="user in users" ng-click="getIdUser(user.id)">
           <a href="#/album/{{user.id}}">{{user.id}}</a>
           <span>{{user.name}}</span>
       </div>
     </div>
+    <ng-view></ng-view>
   </body>
 
 </html>

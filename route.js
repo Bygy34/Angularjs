@@ -3,15 +3,15 @@
      imageApp.config(function($routeProvider){
  	  $routeProvider.when('/',{
  	  templateUrl:'Index.html',
- 	  controller:'ImageCtrl'
+ 	  controller:'todoApp'
  	  });
  	   $routeProvider.when('/album/:userId',{
  	  templateUrl:'partial/album.html',
- 	  controller:'ImageCtrl'
+ 	  controller:'todoApp'
 	  });
  	   $routeProvider.when('/Image/:albumId',{
  	  templateUrl:'partial/Image.html',
- 	  controller:'ImageCtrl'
+ 	  controller:'todoApp'
  	  });
  	   $routeProvider.otherwise({
  	  redirectTo:'/'
