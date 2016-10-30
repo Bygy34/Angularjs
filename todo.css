@@ -26,3 +26,8 @@
         width: 100%;
     }
 }
+@media screen and (max-width:319px ){
+    .image-thumbnails{
+        width: 200%;
+    }
+}
