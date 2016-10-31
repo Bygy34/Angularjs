@@ -9,7 +9,7 @@
   <body ng-controller="TodoListController as todoList">
     <h2>Index</h2>
     <div>
-       <div class="image-thumbnails" ng-repeat="user in users" ng-click="getIdUser(user.id)">
+       <div class="content" ng-repeat="user in users" ng-click="getIdUser(user.id)">
           <a href="#/album/{{user.id}}">{{user.id}} <span>{{user.name}}</span></a>
           
       </div>

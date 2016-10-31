@@ -11,7 +11,7 @@
   <body ng-controller="TodoListController as todoList">
     <h2>Image</h2>
     <div>    
-      <div class="image-thumbnails" ng-repeat="image in images | filter:{albumId:albumIdd}" ng-click="getIdImage(image.id)">
+      <div class="content" ng-repeat="image in images | filter:{albumId:albumIdd}" ng-click="getIdImage(image.id)">
           <p>{{image.id}}</p>
         <a href="{{image.url}}"><img src="{{image.thumbnailUrl}}" /></a> 
           <p>{{image.title}} </p>
