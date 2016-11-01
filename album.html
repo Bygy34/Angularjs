@@ -1,18 +1,6 @@
-<!doctype html>
-<html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-    <script src="todo.js"></script>
-    <link rel="stylesheet" href="todo.css">
-  </head>
-  <body ng-controller="TodoListController as todoList">
-    <h2>album</h2>
-    <div>
-      <div class="content" ng-repeat="album in albums | filter:{userId:userIdd}" ng-click="getIdAlbum(album.id)">
-          <a href="#/image/{{album.id}}">{{album.title}}</a>
-      </div>
-    </div>
-    <ng-view></ng-view>
-  </body>
-</html>
+<h2>album</h2>
+<div>
+  <div class="content" ng-repeat="album in albums | filter:{userId:userIdd}" ng-click="getIdAlbum(album.id)">
+      <a href="#/image/{{album.id}}">{{album.title}}</a>
+  </div>
+</div>

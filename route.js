@@ -1,34 +1,39 @@
+(function () {
+	'use strict';
 
-        (function () {
-    ROOT = $('base').attr('href');
+	angular.module('todoApp', [
+		'ngRoute',
+		'todoApp',
+	]);
 
-    'use strict';   
-	
-	
-	 angular.module('todoApp',['ngRoute'])
-     .config(['$stateProvider', '$httpProvider',
-	 function ($stateProvider, $httpProvider) {
-            $stateProvider.
- 	  when('/',{
- 	  templateUrl:'index.html',
- 	  controller:'todoApp',
- 	  })
- 	  .when('/album/:userId',{
- 	  templateUrl:'album.html',
- 	  controller:'todoApp',
-	  })
- 	  .when('/image/:albumId',{
- 	  templateUrl:'image.html',
- 	  controller:'todoApp',
- 	  })
- 	   .otherwise({
- 	  redirectTo:'/',
-     });
+	angular.module('todoApp').config(['$routeProvider', '$httpProvider',
+		function ($routeProvider, $httpProvider) {
+			$routeProvider.
+				when('/',{
+					templateUrl:'main.html',
+					controller:'TodoListController',
+				})
+				.when('/album',{
+					templateUrl:'album.html',
+					controller:'TodoListController',
+				})
+				.when('/album/:userId',{
+					templateUrl:'album.html',
+					controller:'TodoListController',
+				})
+				.when('/image',{
+					templateUrl:'image.html',
+					controller:'TodoListController',
+				})
+				.when('/image/:albumId',{
+					templateUrl:'image.html',
+					controller:'TodoListController',
+				})
+				.otherwise({
+					redirectTo:'/',
+				});
 
-		imageApp.run(function () {
-
-    });
-	 $scope.userId = $routeParams.userId;
-     $scope.albumIdd = $routeParams.albumId;
+			//$scope.userId = $routeParams.userId;
+			//$scope.albumIdd = $routeParams.albumId;
 		}]);
-		});
+})();

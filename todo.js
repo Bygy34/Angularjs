@@ -1,8 +1,7 @@
-
-angular.module('todoApp', ['ngRoute'])
-.controller('TodoListController', ['$scope', '$http','$rootScope', '$routeParams', 
+(function () {
+    angular.module('todoApp')
+    .controller('TodoListController', ['$scope', '$http','$rootScope', '$routeParams', 
     function($scope, $http,$rootScope, $routeParams) {
-
         $scope.users = [];
         $scope.albums = [];
         $scope.images = [];
@@ -35,11 +34,14 @@ $http.get('http://jsonplaceholder.typicode.com/users').then(function(response){
         });
     });
 
-    $http.get('http://jsonplaceholder.typicode.com/albums').then(function(response){
-        response.data.forEach(function(element){
-            $scope.albums.push(element);
+    $scope.refresh = function() {
+        $http.get('http://jsonplaceholder.typicode.com/albums').then(function(response){
+            response.data.forEach(function(element){
+                $scope.albums.push(element);
+            });
         });
-    });
+    }
+    $scope.refresh();
 
     $http.get('http://jsonplaceholder.typicode.com/photos').then(function(response){
         response.data.forEach(function(element){
@@ -49,3 +51,5 @@ $http.get('http://jsonplaceholder.typicode.com/users').then(function(response){
         console.log(response);
     });
   }]);
+})();
+  

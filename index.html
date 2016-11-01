@@ -1,24 +1,21 @@
 <!doctype html>
 <html ng-app="todoApp">
   <head>
-    
     <link rel="stylesheet" href="todo.css">
   </head>
-  <body ng-controller="TodoListController as todoList">
-    <h2>Index</h2>
-    <div>
-      <a href="#/">Home</a><a href="#/album">Album</a><a href="#/image">image</a>
-      {{userIdd}}
-       <div class="content" ng-repeat="user in users" ng-click="getIdUser(user.id)">
-          <a href="#/album/{{user.id}}">{{user.id}} <span>{{user.name}}</span></a>
-          
-      </div>
-    </div>
+
+  <body>
+    <a href="#/">Home</a>
+    <a href="#/album">Album</a>
+    <a href="#/image">image</a>
+    
     <div ng-view>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-    <script src="todo.js"></script>
     <script src="route.js"></script>
+    <script src="todo.js"></script>
   </body>
 
 </html>
