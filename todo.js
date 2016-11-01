@@ -1,7 +1,7 @@
+
 angular.module('todoApp', ['ngRoute'])
-  .controller('TodoListController',
-   ['$scope', '$http',
-    function($scope, $http) {
+.controller('TodoListController', ['$scope', '$http','$rootScope', '$routeParams', 
+    function($scope, $http,$rootScope, $routeParams) {
 
         $scope.users = [];
         $scope.albums = [];
