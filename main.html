@@ -1,7 +1,7 @@
 <h2>Index</h2>
-<div>
+<div class="navbar">
   {{userIdd}}
   <div class="content" ng-repeat="user in users" ng-click="getIdUser(user.id)">
-    <a href="#/album/{{user.id}}">{{user.id}} <span>{{user.name}}</span></a>
+    <a href="#/album/{{user.id}}">{{user.id}} <span> {{user.name}}</span></a>
   </div>
 </div>

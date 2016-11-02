@@ -1,0 +1,9 @@
+<h2>Photos</h2>
+<div  class="navbar">      
+  <div class="content" ng-repeat="photo in photos | filter:{albumId:albumId}" >
+      <p>{{photo.id}}</p>
+    <a href="{{photo.url}}"><img src="{{photo.thumbnailUrl}}" /></a> 
+      <p>{{image.title}} </p>
+  </div>
+  
+</div>

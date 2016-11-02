@@ -21,19 +21,16 @@
 					templateUrl:'album.html',
 					controller:'TodoListController',
 				})
-				.when('/image',{
-					templateUrl:'image.html',
+				.when('/photo',{
+					templateUrl:'photo.html',
 					controller:'TodoListController',
 				})
-				.when('/image/:albumId',{
-					templateUrl:'image.html',
+				.when('/photo/:albumId',{
+					templateUrl:'photo.html',
 					controller:'TodoListController',
 				})
 				.otherwise({
 					redirectTo:'/',
 				});
-
-			//$scope.userId = $routeParams.userId;
-			//$scope.albumIdd = $routeParams.albumId;
 		}]);
 })();
